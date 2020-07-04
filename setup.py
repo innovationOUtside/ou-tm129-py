@@ -42,7 +42,7 @@ extras = {
       'jupyter-wysiwyg',
       #Supported learning
       'nbtutor',
-      'RISE,
+      'RISE',
       'nb-extension-tagstyler',
       'git+https://github.com/innovationOUtside/nb_extension_empinken.git',
       # Updates
