@@ -22,4 +22,16 @@ We could also use a package to deliver payloads to the student desktop, either i
 
 Using Package version numbers (or `extras_require`) we could easily manage slightly different package versions/distributions for different module presentations.
 
+Using `pip install --upgrade PACKAGE` gives us a way of pushing updates to students.
+
 Note that installing from repos is increasingly tricky to do; it's no longer supported from PyPi installed packages, so if things were only available from a (public) repo they'd have to be done manually. (We could provide a cli tool to do this, installed from the package; eg `tm129_utils install-extras` that runs a `pip git+...` set of installs.)
+
+
+Iddentifying what packages can support an effective teaching and learning environment is an act of creation, and as such is somewhere where we can add value. By sharing environments that may be useful to others:
+
+- we support folk in their own teaching and learning, work and play;
+- we raise awareness of the OU and OU modules, getting a presence on PyPi, maybe using `ou` and course code identifiers in package names etc;
+- if we ship useful commmand line utilities, they can occasionly print OU advertising messages when run...
+- if we ship a a simple web server, it can include module marketing information, "are you read for..?" activities or even sample module content;
+- if we bundle files in the package, these can be retrieved on the student desktop via a simple CLI command; (can we also get desktop shortcuts onto a desktop some how?)
+- the same package could be used to easily support related OpenLearn content;
