@@ -11,11 +11,11 @@ required = [
 
     # Rules based systems
     'durable_rules',
-    'git+https://github.com/innovationOUtside/durable_rules_magic.git',
+    #'git+https://github.com/innovationOUtside/durable_rules_magic.git',
     #'chatterbot==1.0.4',
     'noisify',
     #Simulator
-    'git+https://github.com/innovationOUtside/nbev3devsim.git',
+    #'git+https://github.com/innovationOUtside/nbev3devsim.git',
     
     #Linting
     'flake8',
@@ -44,18 +44,18 @@ extras = {
       'nbtutor',
       'RISE',
       'nb-extension-tagstyler',
-      'git+https://github.com/innovationOUtside/nb_extension_empinken.git',
+        'nb-extension-empinken',
+      #'git+https://github.com/innovationOUtside/nb_extension_empinken.git',
       # Updates
       'ipywidgets>=7.5.0',
       'nbconvert>=5.5.0',
       #'jupyter-archive',
       'nbresuse',
-      'git+https://github.com/NII-cloud-operation/Jupyter-multi_outputs',
+      #'git+https://github.com/NII-cloud-operation/Jupyter-multi_outputs',
       'nbgitpuller',
       'tqdm',
       # Drawing
-      'drawSvg',
-      'git+https://github.com/innovationOUtside/flowchart_js_jp_proxy_widget.git'
+      'drawSvg'
     ],
     'jupyterAL':[
      # Additional packages for ALs
@@ -64,6 +64,11 @@ extras = {
       'nbinteract','voila']
 }
 
+dep_links = [      'https://github.com/innovationOUtside/flowchart_js_jp_proxy_widget.git',
+             "https://github.com/NII-cloud-operation/Jupyter-multi_outputs.git",
+             "https://github.com/innovationOUtside/nbev3devsim.git",
+             "https://github.com/innovationOUtside/durable_rules_magic.git"
+            ]
 setup(
     name='ou-tm129-py',
 
@@ -81,5 +86,6 @@ setup(
     include_package_data=True,
     install_requires=required,
     extras_require=extras,
+    dependency_links=dep_links,
     zip_safe=False,
 )
