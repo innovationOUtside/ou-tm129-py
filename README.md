@@ -20,5 +20,6 @@ So for example, we could deliver:
 
 We could also use a package to deliver payloads to the student desktop, either in terms of files or services. eg we could supply command line utilites, a simple webserver/homepage, or a data files via a Python package.
 
+Using Package version numbers (or `extras_require`) we could easily manage slightly different package versions/distributions for different module presentations.
 
 Note that installing from repos is increasingly tricky to do; it's no longer supported from PyPi installed packages, so if things were only available from a (public) repo they'd have to be done manually. (We could provide a cli tool to do this, installed from the package; eg `tm129_utils install-extras` that runs a `pip git+...` set of installs.)
