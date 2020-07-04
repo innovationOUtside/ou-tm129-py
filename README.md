@@ -13,7 +13,7 @@ So for example, we could deliver:
 
 - core packages that configure a base Python environment: `pip install PACKAGE`;
 - core packages and packages that customise a Jupyter environment in a particular way: `pip install PACKAGE[jupyter]`;
-- core packages and packages that customise a Jupyter environment in a particular way and provide additional packages for ALs: `pip install PACKAGE[jupyter,AL]`;
+- core packages and packages that customise a Jupyter environment in a particular way and provides additional packages for ALs: `pip install PACKAGE[jupyter,AL]`;
 - core packages plus production / development packages: `pip install PACKAGE[dev]`;
 - core packages plus packages required to customise an OU hosted environment: `pip install PACKAGE[ouhosted]`;
 - etc.
