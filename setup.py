@@ -59,7 +59,7 @@ extras = {
     ],
     'jupyterAL':[
      # Additional packages for ALs
-    ]
+    ],
     'production':[#For generating interactive web demos
       'nbinteract','voila']
 }
