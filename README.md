@@ -28,7 +28,7 @@ Note that installing from repos is increasingly tricky to do; it's no longer sup
 
 I'm not sure if [Python package namespaces](https://packaging.python.org/guides/packaging-namespace-packages/) are also relevant? These let you package separate distributions but under the same namespace. Eg we could have separate packages for different modules but all under the `ou` or `openuni` or `openuniversity` namespace? (So we'd have things like `from openuniversity import tm351` etc. and installed via `pip install openuni-tm351` or `pip install openuni-tm129==2020.10.1` or whatever (is there a restriction or limits on the version numbering convention? Does it have to be numeric? Inside a certain range?)
 
-Identifying what packages can support an effective teaching and learning environment is an act of creation, and as such is somewhere where we can add value. By sharing environments that may be useful to others:
+Identifying what packages can support an effective teaching and learning environment is an act of curation, and as such is somewhere where we can add value. By sharing environments that may be useful to others:
 
 - we support folk in their own teaching and learning, work and play;
 - we raise awareness of the OU and OU modules, getting a presence on PyPi, maybe using `ou` and course code identifiers in package names etc;
