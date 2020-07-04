@@ -64,6 +64,7 @@ extras = {
       'nbinteract','voila']
 }
 
+# These no longer work - so everything will have to go on pip? Or be installed manually eg from requirements.txt
 dep_links = [      'https://github.com/innovationOUtside/flowchart_js_jp_proxy_widget.git',
              "https://github.com/NII-cloud-operation/Jupyter-multi_outputs.git",
              "https://github.com/innovationOUtside/nbev3devsim.git",
@@ -74,7 +75,7 @@ setup(
 
     version='0.0.1',
 
-    description='Pyhton environment for TM129',
+    description='Python environment for TM129',
     long_description='',
 
     author='Tony Hirst',
