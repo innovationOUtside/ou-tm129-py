@@ -7,7 +7,7 @@ A Python package can be "empty" other than requiring the presence of particular 
 
 We can define multiple levels of requirement using `install_requires=[]` for necessary packages and `extras_require={}` for optional packages.
 
-Optional package collections can be installed via eg `pip install .[jupyter,production]` where specifiy the `extras_require` dictionary keys for the additional package collections we want to install.
+Optional package collections can be installed via eg `pip install .[jupyter,production]`, using `extras_require` dictionary keys for the additional package collections we want to install.
 
 So for example, we could deliver:
 
