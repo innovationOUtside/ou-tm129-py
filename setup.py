@@ -54,6 +54,8 @@ extras = {
       #'git+https://github.com/NII-cloud-operation/Jupyter-multi_outputs',
       'nbgitpuller',
       'tqdm',
+      # NN
+      'sklearn',
       # Drawing
       'drawSvg'
     ],
