@@ -1,94 +1,71 @@
-
 from setuptools import setup
 
-required = [
-    'numpy',
-    'pandas',
-    'matplotlib',
-    'plotly',
-    'seaborn',
-    'cufflinks', #plotly support for pandas dataframes
+from os import path
 
-    # Rules based systems
-    'durable_rules',
-    #'git+https://github.com/innovationOUtside/durable_rules_magic.git',
-    #'chatterbot==1.0.4',
-    'noisify',
-    #Simulator
-    #'git+https://github.com/innovationOUtside/nbev3devsim.git',
-    
-    #Linting
-    'flake8',
-    'pycodestyle',
-    'pycodestyle_magic',
-    ## Install additional style convention rules
-    'pep8-naming',
-    'flake8-bugbear',
-    'flake8-docstrings',
-    'flake8-builtins',
-    ## Provide additional conventions for pandas code
-    'pandas-vet',
-    ## Autorepair
-    'autopep8'
-    ]
+def get_requirements(fn='requirements.txt', nogit=True):
+   """Get requirements."""
+   if path.exists(fn):
+      with open(fn, 'r') as f:
+        requirements = f.read().splitlines()
+   else:
+     requirements = []
+   requirements = [r.split()[0].strip() for r in requirements if r and not r.startswith('#')]
+   if nogit:
+       requirements = [r for r in requirements if not r.startswith('git+')]
+   return requirements
+   
+requirements = get_requirements()
+
+print(f'Requirements: {requirements}')
 
 extras = {
-    'jupyter': [
-      'jupytext',
-      'jupyter-server-proxy',
-      'nbzip',
-      # Notebook extensions
-      'jupyter_contrib_nbextensions',
-      'jupyter-wysiwyg',
-      #Supported learning
-      'nbtutor',
-      'RISE',
-      'nb-extension-tagstyler',
-        'nb-extension-empinken',
-      #'git+https://github.com/innovationOUtside/nb_extension_empinken.git',
-      # Updates
-      'ipywidgets>=7.5.0',
-      'nbconvert>=5.5.0',
-      #'jupyter-archive',
-      'nbresuse',
-      #'git+https://github.com/NII-cloud-operation/Jupyter-multi_outputs',
-      'nbgitpuller',
-      'tqdm',
-      # NN
-      'sklearn',
-      # Drawing
-      'drawSvg'
-    ],
-    'jupyterAL':[
-     # Additional packages for ALs
-    ],
-    'production':[#For generating interactive web demos
-      'nbinteract','voila']
-}
+    'production': get_requirements('requirements_production.txt'),
+    'AL': get_requirements('requirements_AL.txt')
+    }
 
-# These no longer work - so everything will have to go on pip? Or be installed manually eg from requirements.txt
-dep_links = [      'https://github.com/innovationOUtside/flowchart_js_jp_proxy_widget.git',
-             "https://github.com/NII-cloud-operation/Jupyter-multi_outputs.git",
-             "https://github.com/innovationOUtside/nbev3devsim.git",
-             "https://github.com/innovationOUtside/durable_rules_magic.git"
-            ]
 setup(
-    name='ou-tm129-py',
-
-    version='0.0.1',
-
-    description='Python environment for TM129',
-    long_description='',
-
+    # Meta
     author='Tony Hirst',
     author_email='tony.hirst@open.ac.uk',
-
+    name='ou-tm351-py',
+    url='innovationOUtside/ou-tm129-py',
+    version='0.0.1',
+    description='Python environment for TM129',
+    long_description='',
     license='MIT License',
-
-    packages=[],
-    include_package_data=True,
-    install_requires=required,
+    
+    # Dependencies
+    install_requires=requirements,
+    #setup_requires=[],
     extras_require=extras,
-    dependency_links=dep_links,
+
+    # Packaging
+    #entry_points="",
+    include_package_data=True,
     zip_safe=False,
+
+    # Classifiers
+    classifiers=[
+        'Development Status :: 3 - Alpha',
+        'Environment :: Web Environment',
+        'Intended Audience :: Education',
+        'License :: Free For Educational Use',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Topic :: Education',
+        'Topic :: Scientific/Engineering :: Visualization'
+    ],
 )
+
+import subprocess
+import sys
+
+def install_external_requirements(fn="external_requirements.py"):
+   """Install additional requiremments eg including installs from github."""
+   print(f"Installing external requirements from {fn}")
+   subprocess.check_call([sys.executable, "-m", "pip", "install", "--no-cache-dir", "-r", fn ])
+   #requirements = get_requirements(fn, nogit=True)
+   #for r in requirements:
+   #   print(subprocess.check_output([sys.executable, "-m", "pip", "install", "--no-cache-dir", r ]))
+ 
+install_external_requirements("external_requirements.py")

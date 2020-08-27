@@ -1,0 +1,5 @@
+git+https://github.com/innovationOUtside/flowchart_js_jp_proxy_widget.git
+git+https://github.com/innovationOUtside/nb_cell_execution_status.git
+#git+https://github.com/NII-cloud-operation/Jupyter-multi_outputs.git
+git+https://github.com/innovationOUtside/nbev3devsim.git
+git+https://github.com/innovationOUtside/durable_rules_magic.git
