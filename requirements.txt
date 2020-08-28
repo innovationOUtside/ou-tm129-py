@@ -1,11 +1,21 @@
+
+##########
+
+
 # Base environment
 jupytext
 jupyter-server-proxy
 nbzip
 
+# Utilities
+nbresuse
+nbgitpuller
+tqdm
+
 # Notebook extensions
 jupyter_contrib_nbextensions
 jupyter-wysiwyg
+
 
 #Supported learning
 nbtutor
@@ -18,14 +28,13 @@ nb-extension-empinken
 ipywidgets>=7.5.0
 nbconvert>=5.5.0
 #jupyter-archive
-nbresuse
 #git+https://github.com/NII-cloud-operation/Jupyter-multi_outputs
-nbgitpuller
-tqdm
 
 # Drawing
 drawSvg
+blockdiag
 
+noisify
 
 
 #### Python Specific
@@ -45,7 +54,8 @@ flake8-bugbear
 flake8-docstrings
 flake8-builtins
 
-
+## Provide additional conventions for pandas code
+pandas-vet
 
 #### MODULE SPECIFIC
 
@@ -68,6 +78,5 @@ noisify
 
 # NN
 sklearn
+palettable
 
-## Provide additional linting conventions for pandas code
-pandas-vet
