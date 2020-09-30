@@ -1,4 +1,5 @@
 # Base environment
+myst-nb
 jupytext
 jupyter-server-proxy
 nbzip
@@ -6,6 +7,7 @@ nbzip
 # Notebook extensions
 jupyter_contrib_nbextensions
 jupyter-wysiwyg
+jupyterthemes
 
 #Supported learning
 nbtutor
