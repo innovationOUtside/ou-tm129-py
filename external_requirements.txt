@@ -15,6 +15,9 @@ git+https://github.com/innovationOUtside/nb_extension_empinken.git
 #git+https://github.com/innovationOUtside/nb_extension_twoCol.git
 
 
+# Search
+git+https://github.com/conery/nbscan.git
+
 #Simulator
 git+https://github.com/innovationOUtside/nbev3devsim.git
 
