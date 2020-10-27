@@ -32,7 +32,7 @@ setup(
     author_email='tony.hirst@open.ac.uk',
     name='ou-tm129-py',
     url='https://github.com/innovationOUtside/innovationOUtside/ou-tm129-py',
-    version='0.0.2',
+    version='0.0.3',
     description='Python environment for TM129',
     long_description='',
     license='MIT License',
