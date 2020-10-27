@@ -77,7 +77,7 @@ noisify
 
 #Simulator
 #git+https://github.com/innovationOUtside/nbev3devsim.git
-nbev3devsim
+nbev3devsim>=0.0.6
 
 # NN
 sklearn
