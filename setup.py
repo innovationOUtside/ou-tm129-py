@@ -23,6 +23,23 @@ extras = {
     'AL': get_requirements('requirements_AL.txt')
     }
 
+
+import subprocess
+import sys
+
+def install_external_requirements(fn="external_requirements.txt"):
+   """Install additional requiremments eg including installs from github."""
+   print(f"Installing external requirements from {fn}")
+   #try:
+   #   subprocess.check_call([sys.executable, "-m", "pip", "install", "--no-cache-dir", "-r", fn ])
+   #except:
+   #   print(f"Failed to install {fn}.")
+   requirements = get_requirements(fn, nogit=False)
+   for r in requirements:
+      print(subprocess.check_output([sys.executable, "-m", "pip", "install", "--no-cache-dir", r ]))
+ 
+install_external_requirements("external_requirements.txt")
+
 setup(
     # Meta
     author='Tony Hirst',
@@ -56,19 +73,3 @@ setup(
         'Topic :: Scientific/Engineering :: Visualization'
     ],
 )
-
-import subprocess
-import sys
-
-def install_external_requirements(fn="external_requirements.txt"):
-   """Install additional requiremments eg including installs from github."""
-   print(f"Installing external requirements from {fn}")
-   try:
-      subprocess.check_call([sys.executable, "-m", "pip", "install", "--no-cache-dir", "-r", fn ])
-   except:
-      print(f"Failed to install {fn}.")
-   #requirements = get_requirements(fn, nogit=True)
-   #for r in requirements:
-   #   print(subprocess.check_output([sys.executable, "-m", "pip", "install", "--no-cache-dir", r ]))
- 
-install_external_requirements("external_requirements.txt")
