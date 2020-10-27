@@ -27,8 +27,8 @@ setup(
     # Meta
     author='Tony Hirst',
     author_email='tony.hirst@open.ac.uk',
-    name='ou-tm351-py',
-    url='innovationOUtside/ou-tm129-py',
+    name='ou-tm129-py',
+    url='https://github.com/innovationOUtside/innovationOUtside/ou-tm129-py',
     version='0.0.2',
     description='Python environment for TM129',
     long_description='',
