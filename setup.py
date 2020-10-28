@@ -20,7 +20,7 @@ def get_requirements(fn='requirements.txt', nogit=True):
    if nogit:
        requirements = [r for r in requirements if not r.startswith('git+')]
    return requirements
-   
+
 requirements = get_requirements()
 
 print(f'Requirements: {requirements}')
@@ -30,13 +30,16 @@ extras = {
     'AL': get_requirements('requirements_AL.txt')
     }
 
+
+
+
 setup(
     # Meta
     author='Tony Hirst',
     author_email='tony.hirst@open.ac.uk',
-    name='ou-tm351-py',
-    url='innovationOUtside/ou-tm129-py',
-    #version='0.0.1',
+    name='ou-tm129-py',
+    url='https://github.com/innovationOUtside/innovationOUtside/ou-tm129-py',
+    #version='0.0.3',
     description='Python environment for TM129',
     long_description=get_long_description(),
     long_description_content_type="text/markdown",
@@ -71,12 +74,12 @@ import sys
 def install_external_requirements(fn="external_requirements.txt"):
    """Install additional requiremments eg including installs from github."""
    print(f"Installing external requirements from {fn}")
-   try:
-      subprocess.check_call([sys.executable, "-m", "pip", "install", "--no-cache-dir", "-r", fn ])
-   except:
-      print(f"Failed to install {fn}.")
-   #requirements = get_requirements(fn, nogit=True)
-   #for r in requirements:
-   #   print(subprocess.check_output([sys.executable, "-m", "pip", "install", "--no-cache-dir", r ]))
- 
+   #try:
+   #   subprocess.check_call([sys.executable, "-m", "pip", "install", "--no-cache-dir", "-r", fn ])
+   #except:
+   #   print(f"Failed to install {fn}.")
+   requirements = get_requirements(fn, nogit=False)
+   for r in requirements:
+      print(subprocess.check_output([sys.executable, "-m", "pip", "install", "--no-cache-dir", r ]))
+
 install_external_requirements("external_requirements.txt")
