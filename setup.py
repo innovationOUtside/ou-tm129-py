@@ -39,12 +39,11 @@ setup(
     author_email='tony.hirst@open.ac.uk',
     name='ou-tm129-py',
     url='https://github.com/innovationOUtside/innovationOUtside/ou-tm129-py',
-    #version='0.0.3',
     description='Python environment for TM129',
     long_description=get_long_description(),
     long_description_content_type="text/markdown",
     license='MIT License',
-    packages=['ou_tm_129'],
+    packages=['ou_tm129_py'],
     # Dependencies
     install_requires=requirements,
     #setup_requires=[],
