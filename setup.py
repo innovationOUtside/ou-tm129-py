@@ -33,7 +33,7 @@ setup(
     description='Python environment for TM129',
     long_description='',
     license='MIT License',
-    
+    packages=['ou_tm_129'],
     # Dependencies
     install_requires=requirements,
     #setup_requires=[],
