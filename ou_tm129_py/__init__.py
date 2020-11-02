@@ -27,11 +27,12 @@ def test_install(key_packages=None):
             "nb_tensorflow_playground_serverproxy",
             "convnet_mnist",
             "nb_tensorspace_playground",
-            "nb_handwritten_digit"
+            "nb_handwritten_digit",
+            "tflite_runtime"
         ]
     for p in key_packages:
         try:
-            importlib.import_module(p)
+            importlib.import_module(p.strip())
             print(f"{p} loaded correctly")
         except:
             print(f"{p} appears to be missing")
