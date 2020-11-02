@@ -77,9 +77,8 @@ durable_rules
 noisify
 
 #Simulator
-nbev3devsim
 #git+https://github.com/innovationOUtside/nbev3devsim.git
-nbev3devsim>=0.0.6
+nbev3devsim>=0.0.9
 
 # NN
 sklearn
