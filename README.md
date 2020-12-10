@@ -1,6 +1,10 @@
 # ou-tm129-py
 Python package for installing Python packages required for TM129
 
+Available on [PyPi](https://pypi.org/project/ou-tm129-py/): `pip install ou-tm129-py`
+
+Note: the <tt>tensorflowlite</tt> package needs [installing separately](https://www.tensorflow.org/lite/guide/python).
+
 This repo is exploring how we might distribute Python packages to students via a single installable package.
 
 A Python package can be "empty" other than requiring the presence of particular packages.
