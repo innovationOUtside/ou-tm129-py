@@ -38,7 +38,7 @@ setup(
     author='Tony Hirst',
     author_email='tony.hirst@open.ac.uk',
     name='ou-tm129-py',
-    url='https://github.com/innovationOUtside/innovationOUtside/ou-tm129-py',
+    url='https://github.com/innovationOUtside/ou-tm129-py',
     description='Python environment for TM129',
     long_description=get_long_description(),
     long_description_content_type="text/markdown",
